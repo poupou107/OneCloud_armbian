@@ -6,11 +6,11 @@ on:
 env:
   SCRIPT_REPO: ${{ github.repository }}
   SCRIPT_REF: ${{ github.ref_name }}
-  UBOOT_REPO: hzyitc/u-boot-onecloud
+  UBOOT_REPO: poupou107/u-boot-onecloud
   UBOOT_RELEASE: latest
   UBOOT_BURNIMG: eMMC.burn.img
   ARMBIAN_REPO: armbian/build
-  ARMBIAN_REF: v26.2.1
+  ARMBIAN_REF: main
 
 permissions:
   contents: write
@@ -192,11 +192,11 @@ jobs:
           # - jammy # Ubuntu 22.04 LTS
           - noble # Ubuntu 24.04 LTS
           #- oracular # Ubuntu 24.10
-          - plucky # Ubuntu 25.04
+          #- plucky # Ubuntu 25.04
           # - buster # Debian 10
           # - bullseye # Debian 11
-          - bookworm # Debian 12
-          - trixie # Debian 13
+          #- bookworm # Debian 12
+          #- trixie # Debian 13
           #- sid # Debian unstable
         TYPE:
           - minimal
