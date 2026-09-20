@@ -6,7 +6,7 @@ on:
         type: choice
         description: 选择源码分支
         required: true
-        default: "v26.2.1"
+        default: "main"
         options:
         - v26.5.1
         - v26.2.1
@@ -35,11 +35,12 @@ jobs:
           #- minimal
           - server
           #- xfce
+          - cli
           
     steps:
       - uses: armbian/build@main
         with:
-          armbian_token:     "${{ secrets.GITHUB_TOKEN }}"  # GitHub token
+          armbian_token:     "${{ secrets.GH_PAT }}"  # GitHub token
           armbian_release:   "${{ matrix.RELEASE }}"                        # userspace
           armbian_target:    "build"                        # build=image, kernel=kernel
           armbian_board:     "onecloud"                   # build target
