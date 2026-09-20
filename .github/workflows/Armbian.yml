@@ -35,7 +35,7 @@ jobs:
           #- minimal
           - server
           #- xfce
-          - cli
+          #- cli
           
     steps:
       - uses: armbian/build@main
