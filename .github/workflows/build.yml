@@ -199,8 +199,9 @@ jobs:
           #- trixie # Debian 13
           #- sid # Debian unstable
         TYPE:
-          - minimal
-          - cli
+          #- minimal
+          #- cli
+          - server
     steps:
       - name: 引入环境参数
         run: |
@@ -273,7 +274,7 @@ jobs:
       - name: 下载解压最新u-boot
         run: |
           echo "::group::Download"
-          curl -L -o ./uboot.img https://github.com/rmoyulong/u-boot-onecloud/releases/download/Onecloud_Uboot_23.12.24_18.15.09/eMMC.burn.img
+          curl -L -o ./uboot.img https://github.com/poupou107/u-boot-onecloud/releases/download/build-20260920-0146/eMMC.burn.img
           echo "::endgroup::"
 
           echo "::group::Unpack"
